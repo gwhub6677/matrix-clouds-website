@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; img-src 'self' data: https:; font-src 'self' data:;">
+    <title>Matrix Clouds - Futuristic Cloud Hosting Website</title>
+    <style>
+      /* Reset and base styles */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+      }
+      
+      /* Prevent flash of unstyled content */
+   #root {
+  background: #1f2937 url('your-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+      
+      .loading {
+        color: white;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      
+      /* Hide loading once React loads */
+      #root:has(.min-h-screen) .loading {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading">Loading Matrix Clouds...</div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
