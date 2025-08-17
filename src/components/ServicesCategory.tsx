@@ -12,50 +12,50 @@ const ServicesCategory = () => {
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['Minecraft Hosting']);
 
   const PURCHASE_LINKS: Record<number, string> = {
-    1: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/classic',
-    2: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/common',
-    3: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/epic',
-    4: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/pro',
-    5: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/power',
-    6: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/mega',
-    7: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/premium',
-    8: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/matrix',
-    9: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/infinite',
-    10: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/classic-plan',
-    11: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/epic-plan',
-    12: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/pro-plan',
-    13: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/power-plan',
-    14: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/mega-plan',
-    15: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/premium-plan',
-    16: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/matrix-plan',
-    17: 'https://www.matrixclouds.site/billing/store/performance-minecraft-hosting/infinite-plan',
-    18: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/common-plan',
-    19: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/epic-plan',
-    20: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/pro-plan',
-    21: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/power-plan',
-    22: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/mega-plan',
-    23: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/premium-plan',
-    24: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/matrix-plan',
-    25: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/infinite-plan',
-    26: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/matrix-plan',
-    27: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/infinite-plan',
-    32: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/aurora-vps',
-    33: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/starlight-vps',
-    34: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/eclipse-vps',
-    35: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/novacore-vps',
-    36: 'https://www.matrixclouds.site/billing/store/vps-hosting/india-intel-xeon-vps-budget',
-    37: 'https://www.matrixclouds.site/billing/store/vps-hosting/warpdrive-vps',
-    38: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/starlight-vps',
-    39: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/eclipse-vps',
-    40: 'https://www.matrixclouds.site/billing/store/vps-hosting/solarflare-vps',
-    41: 'https://www.matrixclouds.site/billing/store/vps-hosting/hypernova-vps',
-    42: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/novacore-vps',
-    43: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/mercury-vps',
-    44: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/saturn-vps',
-    45: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/jupiter-vps',
-    46: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/titan-vps',
-    52: 'https://www.matrixclouds.site/billing/store/web-hosting/normal-web-plan',
-    53: 'https://www.matrixclouds.site/billing/store/web-hosting/power-web-plan',
+    1: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=1',
+    2: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=2',
+    3: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=3',
+    4: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=4',
+    5: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=5',
+    6: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=6',
+    7: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=7',
+    8: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=8',
+    9: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=9',
+    10: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=10',
+    11: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=11',
+    12: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=12',
+    13: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=13',
+    14: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=14',
+    15: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=15',
+    16: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=16',
+    17: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=17',
+    18: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=18',
+    19: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=19',
+    20: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=20',
+    21: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=21',
+    22: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=22',
+    23: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=23',
+    24: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=24',
+    25: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=25',
+    26: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=26',
+    27: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=27',
+    32: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=32',
+    33: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=33',
+    34: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=34',
+    35: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=35',
+    36: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=36',
+    37: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=37',
+    38: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=38',
+    39: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=39',
+    40: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=40',
+    41: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=41',
+    42: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=42',
+    43: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=43',
+    44: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=44',
+    45: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=45',
+    46: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=46',
+    52: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=52',
+    53: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=53',
 
   };
 
@@ -1289,12 +1289,20 @@ const ServicesCategory = () => {
                       href={PURCHASE_LINKS[service.id]}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
                       className="block w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-center"
                     >
                       Get Started
                     </a>
                   ) : (
-                    <button className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
+                      className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                    >
                       <span>Get Started</span>
                     </button>
                   )}
