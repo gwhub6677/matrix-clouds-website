@@ -13,8 +13,51 @@ const ServicesCategory = () => {
 
   type PurchaseValue = string | number; // string = full URL, number = WHMCS pid
   const PURCHASE_LINKS: Record<number, PurchaseValue> = {
-    // Known exact links
-    1: 'https://www.matrixclouds.site/billing/store/minecraft-hosting/classic',
+    1: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=1',
+    2: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=2',
+    3: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=3',
+    4: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=4',
+    5: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=5',
+    6: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=6',
+    7: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=7',
+    8: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=8',
+    9: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=9',
+    10: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=10',
+    11: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=11',
+    12: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=12',
+    13: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=13',
+    14: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=14',
+    15: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=15',
+    16: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=16',
+    17: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=17',
+    18: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=18',
+    19: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=19',
+    20: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=20',
+    21: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=21',
+    22: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=22',
+    23: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=23',
+    24: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=24',
+    25: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=25',
+    26: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=26',
+    27: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=27',
+    32: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=32',
+    33: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=33',
+    34: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=34',
+    35: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=35',
+    36: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=36',
+    37: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=37',
+    38: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=38',
+    39: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=39',
+    40: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=40',
+    41: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=41',
+    42: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=42',
+    43: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=43',
+    44: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=44',
+    45: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=45',
+    46: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=46',
+    52: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=52',
+    53: 'https://www.matrixclouds.site/billing/cart.php?a=add&pid=53',
+
   };
 
   const PURCHASE_LINKS_BY_LOCATION_AND_NAME: Record<string, Record<string, PurchaseValue>> = {
@@ -24,30 +67,6 @@ const ServicesCategory = () => {
     //   'Warpdrive VPS': 2,
     // },
   };
-
-  // Mapping by order within a location group
-  const PURCHASE_LINKS_BY_LOCATION_INDEX: Record<string, PurchaseValue[]> = {
-    // Intel Budget VPS (India): in-order mapping to PIDs 1..8
-    'Intel-India': [1, 2, 3, 4, 5, 6, 7, 8],
-    // Add more groups here when ready, e.g. 'Ryzen9-India': [9,10,11,12]
-  };
-
-  // Build a quick lookup of each service's index within its location group (based on declaration order)
-  const locationOrderIndex: Record<string, Record<number, number>> = React.useMemo(() => {
-    const map: Record<string, Record<number, number>> = {};
-    const locationToIds: Record<string, number[]> = {};
-    for (const s of services) {
-      if (!locationToIds[s.location]) locationToIds[s.location] = [];
-      locationToIds[s.location].push(s.id);
-    }
-    for (const [loc, ids] of Object.entries(locationToIds)) {
-      map[loc] = {};
-      ids.forEach((id, idx) => {
-        map[loc][id] = idx;
-      });
-    }
-    return map;
-  }, []);
 
   const resolvePurchaseUrl = (value: PurchaseValue): string => {
     if (typeof value === 'number') {
@@ -61,11 +80,6 @@ const ServicesCategory = () => {
     if (byId) return resolvePurchaseUrl(byId);
     const byLoc = PURCHASE_LINKS_BY_LOCATION_AND_NAME[service.location]?.[service.name];
     if (byLoc) return resolvePurchaseUrl(byLoc);
-    const idx = locationOrderIndex[service.location]?.[service.id];
-    if (idx !== undefined) {
-      const byIndex = PURCHASE_LINKS_BY_LOCATION_INDEX[service.location]?.[idx];
-      if (byIndex) return resolvePurchaseUrl(byIndex);
-    }
     return undefined;
   };
 
