@@ -37,10 +37,26 @@ const ServicesCategory = () => {
     23: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/premium-plan',
     24: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/matrix-plan',
     25: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/infinite-plan',
+    26: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/matrix-plan',
+    27: 'https://www.matrixclouds.site/billing/store/annual-minecraft-hosting/infinite-plan',
     32: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/aurora-vps',
     33: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/starlight-vps',
     34: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/eclipse-vps',
     35: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/novacore-vps',
+    36: 'https://www.matrixclouds.site/billing/store/vps-hosting/india-intel-xeon-vps-budget',
+    37: 'https://www.matrixclouds.site/billing/store/vps-hosting/warpdrive-vps',
+    38: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/starlight-vps',
+    39: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/eclipse-vps',
+    40: 'https://www.matrixclouds.site/billing/store/vps-hosting/solarflare-vps',
+    41: 'https://www.matrixclouds.site/billing/store/vps-hosting/hypernova-vps',
+    42: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-india/novacore-vps',
+    43: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/mercury-vps',
+    44: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/saturn-vps',
+    45: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/jupiter-vps',
+    46: 'https://www.matrixclouds.site/billing/store/intel-standard-vps-germany/titan-vps',
+    52: 'https://www.matrixclouds.site/billing/store/web-hosting/normal-web-plan',
+    53: 'https://www.matrixclouds.site/billing/store/web-hosting/power-web-plan',
+
   };
 
   // Handle URL parameters on component mount
